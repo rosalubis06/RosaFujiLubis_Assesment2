@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+    <form id="myForm">
+        <label for="quote">Quote:</label>
+        <input type="text" id="quote" name="quote"><br><br>
+
+        <label for="author">Author:</label>
+        <input type="text" id="author" name="author"><br><br>
+
+        <input type="submit" value="Submit">
+    </form>
+
+    <script>
+        var data = {"quote": "In the middle of difficulty lies opportunity", "author": "Rosa Fuji Lubis"};
+
+        document.getElementById("quote").value = data.quote;
+        document.getElementById("author").value = data.author;
+    </script>
+</body>
+</html>
