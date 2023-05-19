@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs5/dt-1.11.3/datatables.min.css"/>
+</head>
+<body>
+    <table id="data-table" class="table">
+        <thead>
+            <tr>
+                <th>Quote</th>
+                <th>Author</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.datatables.net/v/bs5/dt-1.11.3/datatables.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#data-table').DataTable({
+                ajax: {
+                    url: 'https://api.goprogram.ai/inspiration',
+                    dataSrc: ''
+                },
+                columns: [
+                    { data: 'quote' },
+                    { data: 'author' }
+                ]
+            });
+        });
+    </script>
+</body>
+</html>
